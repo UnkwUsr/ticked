@@ -85,14 +85,15 @@ fn run_editor(path: &str) {
 
 fn prompt_user(mode: Mode, diff_tasks: &Vec<MyTask>) {
     println!(
-        "{}",
+        "\n{}",
         match mode {
             Mode::Delete => "To delete:",
-            Mode::Edit => "Changes:",
+            Mode::Edit => "Changed:",
         }
     );
-    println!("{:#?}", diff_tasks);
-    println!("Press enter to apply");
+    let asd: Vec<&str> = diff_tasks.iter().map(|x| x.title.as_ref()).collect();
+    println!("* {}", asd.join("\n* "));
+    println!("\nPress enter to apply");
     let mut asd = String::new();
     std::io::stdin().read_line(&mut asd).unwrap();
 }

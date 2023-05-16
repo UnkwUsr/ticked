@@ -66,10 +66,22 @@ pub fn send(tasks: Vec<MyTask>) -> Result<(), Box<dyn Error>> {
             transfer.perform()?;
         }
 
-        println!("code {:?}", handle.response_code()?);
+        match handle.response_code() {
+            Ok(code) => {
+                if code == 200 {
+                    println!("Ok");
+                }
+                else {
+                    println!("Something went wrong. Error code {:?}", code);
+                }
+            }
+            Err(err) => {
+                println!("Error: {:?}", err)
+            }
+        }
     }
 
-    println!("{:?}", std::str::from_utf8(&response_data)?);
+    // println!("{:?}", std::str::from_utf8(&response_data)?);
 
     Ok(())
 }

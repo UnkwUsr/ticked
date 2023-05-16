@@ -1,9 +1,16 @@
 [package]
 name = "ticked"
 version = "0.1.0"
+authors = ["UnkwUsr <ktoto2707043@gmail.com>"]
+description = """
+cli tool for managing ticktick.com tasks
+"""
+repository = "https://github.com/UnkwUsr/ticked"
+keywords = ["ticktick"]
+categories = ["command-line-utilities"]
+license = "MIT"
 edition = "2021"
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
 curl = { version = "0.4.44", features = [] }

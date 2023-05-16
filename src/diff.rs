@@ -42,7 +42,8 @@ pub fn get_diff(mode: &Mode, old_tasks: Vec<MyTask>, new_tasks: Vec<MyTask>) -> 
 }
 
 fn eq_tasks(a: &MyTask, b: &MyTask) -> bool {
-    a.title == b.title && a.content == b.content
+    a.title == b.title
+        && a.content.as_deref().unwrap_or_default() == b.content.as_deref().unwrap_or_default()
 }
 
 fn apply_task_changes(mut old: MyTask, new: MyTask) -> MyTask {

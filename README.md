@@ -75,3 +75,8 @@ projects/forks, so feel free to create issue for that). However, there is
 (in "delete" mode too), so it should be safe to use. Just **review everything
 before confirm**. And even if you'll mark something as done occasionally, you
 can find it in ticktick "completed" folder.
+
+## Related projects
+
+* [ticktask](https://github.com/UnkwUsr/ticktask) - a simple cli for creating
+  tasks on [ticktick.com](https://ticktick.com).

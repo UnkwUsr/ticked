@@ -1,6 +1,6 @@
 [package]
 name = "ticked"
-version = "0.1.0"
+version = "0.1.1"
 authors = ["UnkwUsr <ktoto2707043@gmail.com>"]
 description = """
 cli tool for managing ticktick.com tasks

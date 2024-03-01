@@ -32,7 +32,9 @@ You need to extract value of cookie named "t" from authorized session on
 TICKTICK_COOKIE=<your_cookie_there> ticked
 ```
 
-(you may want to create wrapper script for this)
+(you may want to create wrapper script for this. BUT DON'T SET THIS VARIABLE
+FROM `.bash_profile` (or something similar), because then any program will be
+able to read this or it can leak with automatic bug reports)
 
 It will open your `$EDITOR` with tasks from your ticktick inbox list. On the
 first line you'll see `# Mode: d`. There is two possible modes: `d` and `e`.
